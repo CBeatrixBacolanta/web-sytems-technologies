@@ -8,44 +8,49 @@
 </head>
 
 <body>
-    <div class="bg-gray-100 inline-block w-screen h-screen items-center">
+    <div class="bg-cover bg-no-repeat w-screen h-screen" 
+         style="background-image: url('wallpaperflare.com_wallpaper\ \(2\).jpg');">
+        </div>
+    <div class="absolute top-0 inline-block w-screen h-screen items-center">
         <div class="w-72 h-96 shadow-xl bg-white mt-[10%] ml-[5%] rounded-lg">
             <div class="flex justify-center font-mono font-bold text-lg mb-2">
                 <h1>Create an Account</h1>
             </div>
-            <label for="name" class="font-mono text-sm ml-3">Name</label>
-            <div class="static">
-                <div class="flex justify-center items-center mb-4">
-                    <input type="text" id="name" class="w-full h-9 ml-5 mr-5 mt-1 border text-base focus:outline-none focus:ring-0 focus:border-gray-600">
+            <form id="registrationForm">
+                <label for="name" class="font-mono text-sm ml-3">Name</label>
+                <div class="static">
+                    <div class="flex justify-center items-center mb-4">
+                        <input type="text" id="name" class="w-full h-9 ml-5 mr-5 mt-1 border text-base focus:outline-none focus:ring-0 focus:border-gray-600">
+                    </div>
                 </div>
-            </div>
 
-            <label for="name" class="font-mono text-sm ml-3">Email</label>
-            <div class="static">
-                <div class="flex justify-center items-center mb-4">
-                    <input type="text" id="email" class="w-full h-9 ml-5 mr-5 mt-1 border text-base focus:outline-none focus:ring-0 focus:border-gray-600">
+                <label for="email" class="font-mono text-sm ml-3">Email</label>
+                <div class="static">
+                    <div class="flex justify-center items-center mb-4">
+                        <input type="text" id="email" class="w-full h-9 ml-5 mr-5 mt-1 border text-base focus:outline-none focus:ring-0 focus:border-gray-600">
+                    </div>
                 </div>
-            </div>
 
-            <label for="name" class="font-mono text-sm ml-3 mb-4">Role</label>
-            <div class="mb-4">
-                <select id="role" name="role" class="w-[86%] ml-5 mb-2 border rounded h-9 focus:outline-none focus:border-blue-500" required>
-                    <option value="admin">Select</option>
-                    <option value="admin">Admin</option>
-                    <option value="user">Student</option>
-                </select>
-            </div>
+                <label for="role" class="font-mono text-sm ml-3 mb-4">Role</label>
+                <div class="mb-4">
+                    <select id="role" name="role" class="w-[86%] ml-5 mb-2 border rounded h-9 focus:outline-none focus:border-blue-500" required>
+                        <option value="select">Select</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Student">Student</option>
+                    </select>
+                </div>
 
-            <div class="mb-6">
-                <button type="create" class="w-[86%] ml-5 h-9 bg-blue-500 text-white font-bold rounded focus:outline-none focus:shadow-outline hover:bg-blue-600">Create Account</button>
-            </div>
+                <div class="mb-6">
+                    <button type="submit" class="w-[86%] ml-5 h-9 bg-blue-500 text-white font-bold rounded focus:outline-none focus:shadow-outline hover:bg-blue-600">Create Account</button>
+                </div>
+            </form>
 
         </div>
-        <div class="float-right w-[65%] h-[25%] shadow-2xl top-0 font-mono mr-[5%] -mt-[25%]">
+        <div class="float-right w-[65%] h-64 shadow-2xl top-0 font-mono mr-[5%] -mt-[25%]">
             <div class="bg-white flex items-top justify-center rounded-lg">
                 <div class="w-[65%] h-64 mt-12">
                     <h2 class="text-xl mt-0 font-bold mb-4 text-center">User List</h2>
-                    <table class="w-full border">
+                    <table id="userTable" class="w-full border">
                         <thead>
                             <tr>
                             <th class="border p-2">ID</th>
@@ -56,35 +61,13 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                            <td class="border p-2">1</td>
-                            <td class="border p-2">Ronalyn Anne Padilla</td>
-                            <td class="border p-2">ronalyn.padilla@gmail.com</td>
-                            <td class="border p-2">Admin</td>
-                            <td class="border p-2">
-                                <button class="bg-blue-500 text-white p-1"><i class="fa fa-edit"></i></button>
-                                <button class="bg-red-500 text-white p-1"><i class="fa fa-trash"></i></button>
-                            </td>
-                            </tr>
-                            <tr>
-                            <td class="border p-2">2</td>
-                            <td class="border p-2">Ronalyn Test</td>
-                            <td class="border p-2">ronalyn.test@gmail.com</td>
-                            <td class="border p-2">User</td>
-                            <td class="border p-2">
-                                <button class="bg-blue-500 text-white p-1"><i class="fa fa-edit"></i></button>
-                                <button class="bg-red-500 text-white p-1"><i class="fa fa-trash"></i></button>
-                            </td>
-                            </tr>
+                            <!-- Empty rows to be filled with data later on -->
                         </tbody>
                     </table>        
                 </div>
             </div> 
         </div>
-
-            
-    
-        
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
